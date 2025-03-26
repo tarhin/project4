@@ -583,7 +583,7 @@ main .main_doctor .doctor_content .doctor_content_text > a img {
   margin: 0 0 0 0.625rem;
 }
 main .main_menu h2,
-main .main_case h2,
+main .main_case_top h2,
 main .main_gallery h2,
 main .main_access h2,
 main .main_calendar h2,
@@ -602,7 +602,7 @@ main .main_price h2 {
   margin: 0 auto;
 }
 main .main_menu > h3,
-main .main_case > h3,
+main .main_case_top > h3,
 main .main_gallery > h3,
 main .main_access > h3,
 main .main_calendar > h3,
@@ -621,7 +621,7 @@ main .main_price > h3 {
   letter-spacing: 0.24rem;
 }
 main .main_menu .features_bar,
-main .main_case .features_bar,
+main .main_case_top .features_bar,
 main .main_gallery .features_bar,
 main .main_access .features_bar,
 main .main_calendar .features_bar,
@@ -710,51 +710,51 @@ main .main_menu .menu_content:nth-of-type(4) {
   background: url("../img/main_menu_image3.jpg") center/cover no-repeat;
   margin-top: 4rem;
 }
-main .main_case {
+main .main_case_top {
   background: url("../img/case_bg.jpg") center/cover no-repeat;
   font-family: "Noto Serif JP", "Yu Mincho", serif;
   padding: 4rem 0 5rem;
 }
-main .main_case .case_content_wrapper {
+main .main_case_top .case_content_wrapper {
   display: flex;
   justify-content: space-between;
   width: 62.5rem;
   margin: 3.125rem auto 0;
 }
-main .main_case .case_content_wrapper .case_content {
+main .main_case_top .case_content_wrapper .case_content {
   width: 15rem;
   padding: 1.875rem 1.25rem 0 1.25rem;
   background-color: rgb(247, 247, 247);
   box-sizing: border-box;
 }
-main .main_case .case_content_wrapper .case_content .case_content_img {
+main .main_case_top .case_content_wrapper .case_content .case_content_img {
   width: 12.5rem;
   height: 14rem;
   border: 0.0625rem rgb(163, 129, 9) solid;
 }
-main .main_case .case_content_wrapper .case_content .case_content_text:nth-of-type(2) {
+main .main_case_top .case_content_wrapper .case_content .case_content_text:nth-of-type(2) {
   height: 2.8125rem;
   margin: 0.625rem 0 0.625rem 0;
 }
-main .main_case .case_content_wrapper .case_content .case_content_text:nth-of-type(3) {
+main .main_case_top .case_content_wrapper .case_content .case_content_text:nth-of-type(3) {
   height: 2.8125rem;
   margin: 0 0 0.625rem 0;
 }
-main .main_case .case_content_wrapper .case_content .case_content_text:nth-of-type(4) {
+main .main_case_top .case_content_wrapper .case_content .case_content_text:nth-of-type(4) {
   height: 3.1875rem;
   margin: 0 0 0.625rem 0;
 }
-main .main_case .case_content_wrapper .case_content .case_content_text:nth-of-type(5) {
+main .main_case_top .case_content_wrapper .case_content .case_content_text:nth-of-type(5) {
   height: 2.125rem;
   margin: 0 0 1.875rem 0;
 }
-main .main_case .case_content_wrapper .case_content h4 {
+main .main_case_top .case_content_wrapper .case_content h4 {
   font-size: 0.75rem;
   font-weight: 500;
   color: rgb(175, 175, 175);
   letter-spacing: 0.0375rem;
 }
-main .main_case .case_content_wrapper .case_content p {
+main .main_case_top .case_content_wrapper .case_content p {
   font-size: 0.875rem;
   font-weight: 500;
   color: rgb(77, 77, 77);
@@ -955,6 +955,10 @@ main .main_access .access_content_wrapper .access_text p {
   width: 27.6875rem;
   font-family: "Noto Serif JP", "Yu Mincho", serif;
   color: rgb(102, 102, 102);
+}
+main .main_access .access_content_wrapper .access_map iframe {
+  width: 24.8125rem;
+  height: 17.6875rem;
 }
 main .main_calendar {
   padding: 5rem 0;
@@ -1462,12 +1466,18 @@ footer .footer_content_copyright {
        column-gap: 3.75rem;
 }
 
-.main_clinic .clinic_content_wrapper {
+.main_clinic.main_treatment.main_price h2 {
+  display: static;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.main_clinic.main_treatment.main_price .clinic_content_wrapper {
   margin: 2.6875rem 0 0 0;
   padding: 5rem 0;
   position: relative;
 }
-.main_clinic .clinic_bg {
+.main_clinic.main_treatment.main_price .clinic_bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -1476,12 +1486,12 @@ footer .footer_content_copyright {
   background: url("../img/clinic_bg.png") top/cover no-repeat;
   z-index: -1;
 }
-.main_clinic .clinic_content h3, .main_clinic .clinic_content p {
+.main_clinic.main_treatment.main_price .clinic_content h3, .main_clinic.main_treatment.main_price .clinic_content p {
   font-family: "Yu Mincho", "Noto Serif JP", serif;
   line-height: 1.6;
   letter-spacing: 0.08rem;
 }
-.main_clinic .clinic_content h3 {
+.main_clinic.main_treatment.main_price .clinic_content h3 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1493,14 +1503,14 @@ footer .footer_content_copyright {
           background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.main_clinic .clinic_content p {
+.main_clinic.main_treatment.main_price .clinic_content p {
   font-weight: 500;
   font-size: 1rem;
   margin: 1.5rem 0 0 0;
   color: rgb(102, 102, 102);
   text-align: center;
 }
-.main_clinic .clinic_content_wrapper:nth-of-type(3) > h3 {
+.main_clinic.main_treatment.main_price .clinic_content_wrapper:nth-of-type(3) > h3 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1514,7 +1524,7 @@ footer .footer_content_copyright {
   letter-spacing: 0.64rem;
   margin: 0 auto;
 }
-.main_clinic .clinic_content_wrapper:nth-of-type(3) > h4 {
+.main_clinic.main_treatment.main_price .clinic_content_wrapper:nth-of-type(3) > h4 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1528,20 +1538,20 @@ footer .footer_content_copyright {
   margin: 1rem auto 0;
   letter-spacing: 0.24rem;
 }
-.main_clinic .clinic_content_wrapper:nth-of-type(3) .features_bar {
+.main_clinic.main_treatment.main_price .clinic_content_wrapper:nth-of-type(3) .features_bar {
   width: 5rem;
   height: 0.0625rem;
   background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
   margin: 1rem auto 0 auto;
 }
-.main_clinic .clinic_content_wrapper:nth-of-type(3) .clinic_content {
+.main_clinic.main_treatment.main_price .clinic_content_wrapper:nth-of-type(3) .clinic_content {
   display: flex;
   justify-content: center;
   -moz-column-gap: 1.875rem;
        column-gap: 1.875rem;
   margin: 4rem 0 0 0;
 }
-.main_clinic .clinic_content_wrapper:nth-of-type(3) .clinic_content h4 {
+.main_clinic.main_treatment.main_price .clinic_content_wrapper:nth-of-type(3) .clinic_content h4 {
   font-family: "Zen Old Mincho", "Yu Mincho", serif;
   font-weight: 43.75rem;
   font-size: 1.25rem;
@@ -1549,7 +1559,7 @@ footer .footer_content_copyright {
   color: rgb(173, 127, 82);
   text-align: center;
 }
-.main_clinic .clinic_content_wrapper:nth-of-type(3) > p {
+.main_clinic.main_treatment.main_price .clinic_content_wrapper:nth-of-type(3) > p {
   font-family: "Yu Mincho", "Noto Serif JP", serif;
   line-height: 1.6;
   letter-spacing: 0.08rem;
